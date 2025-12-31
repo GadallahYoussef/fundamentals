@@ -1,0 +1,418 @@
+{
+    "description": "Sample Indicators of Compromise (IOCs) for testing the Incident Response Automation Tool",
+    "version": "1.0",
+    "last_updated": "2024-12-27",
+    "indicators": {
+        "ip_addresses": [
+            {
+                "value": "203.0.113.50",
+                "type": "ipv4",
+                "threat_type": "scanner",
+                "description": "Known SSH scanner",
+                "confidence": "high",
+                "source": "internal_threat_intel"
+            },
+            {
+                "value": "198.51.100.23",
+                "type": "ipv4",
+                "threat_type": "brute_force",
+                "description": "Brute force attack source",
+                "confidence": "high",
+                "source": "abuse_ch"
+            },
+            {
+                "value": "45.33.32.156",
+                "type": "ipv4",
+                "threat_type": "c2",
+                "description": "Cobalt Strike C2 server",
+                "confidence": "high",
+                "source": "feodotracker"
+            },
+            {
+                "value": "192.0.2.100",
+                "type": "ipv4",
+                "threat_type": "ransomware",
+                "description": "Ransomware C2 infrastructure",
+                "confidence": "medium",
+                "source": "ransomwaretracker"
+            },
+            {
+                "value": "203.0.113.100",
+                "type": "ipv4",
+                "threat_type": "malware",
+                "description": "Emotet C2 server",
+                "confidence": "high",
+                "source": "abuse_ch"
+            },
+            {
+                "value": "10.99.99.99",
+                "type": "ipv4",
+                "threat_type": "internal_threat",
+                "description": "Compromised internal host",
+                "confidence": "medium",
+                "source": "internal_investigation"
+            }
+        ],
+        "domains": [
+            {
+                "value": "malware-c2.evil",
+                "type": "domain",
+                "threat_type": "c2",
+                "description": "Known malware C2 domain",
+                "confidence": "high",
+                "source": "urlhaus"
+            },
+            {
+                "value": "phishing-site.com",
+                "type": "domain",
+                "threat_type": "phishing",
+                "description": "Credential phishing domain",
+                "confidence": "high",
+                "source": "phishtank"
+            },
+            {
+                "value": "update-service-cdn.net",
+                "type": "domain",
+                "threat_type": "malware_distribution",
+                "description": "Fake update malware distribution",
+                "confidence": "medium",
+                "source": "urlhaus"
+            },
+            {
+                "value": "secure-login-portal.xyz",
+                "type": "domain",
+                "threat_type": "phishing",
+                "description": "Banking credential harvester",
+                "confidence": "high",
+                "source": "internal_threat_intel"
+            }
+        ],
+        "file_hashes": [
+            {
+                "value": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+                "type": "sha256",
+                "threat_type": "malware",
+                "description": "Known malware sample",
+                "confidence": "high",
+                "source": "virustotal"
+            },
+            {
+                "value": "d41d8cd98f00b204e9800998ecf8427e",
+                "type": "md5",
+                "threat_type": "ransomware",
+                "description": "Ransomware payload",
+                "confidence": "high",
+                "source": "malwarebazaar"
+            },
+            {
+                "value": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
+                "type": "sha1",
+                "threat_type": "trojan",
+                "description": "Remote access trojan",
+                "confidence": "medium",
+                "source": "hybrid_analysis"
+            }
+        ],
+        "process_names": [
+            {
+                "value": "mimikatz.exe",
+                "type": "process",
+                "threat_type": "credential_theft",
+                "description": "Credential dumping tool",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "mimikatz",
+                "type": "process",
+                "threat_type": "credential_theft",
+                "description": "Credential dumping tool (Linux)",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "procdump.exe",
+                "type": "process",
+                "threat_type": "credential_theft",
+                "description": "Process dumping for credential extraction",
+                "confidence": "medium",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "psexec.exe",
+                "type": "process",
+                "threat_type": "lateral_movement",
+                "description": "Remote execution tool",
+                "confidence": "medium",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "cobalt",
+                "type": "process",
+                "threat_type": "c2",
+                "description": "Cobalt Strike beacon",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "beacon.exe",
+                "type": "process",
+                "threat_type": "c2",
+                "description": "C2 beacon process",
+                "confidence": "high",
+                "source": "internal_threat_intel"
+            },
+            {
+                "value": "nc.exe",
+                "type": "process",
+                "threat_type": "backdoor",
+                "description": "Netcat - potential reverse shell",
+                "confidence": "medium",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "nc",
+                "type": "process",
+                "threat_type": "backdoor",
+                "description": "Netcat - potential reverse shell (Linux)",
+                "confidence": "medium",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "rubeus.exe",
+                "type": "process",
+                "threat_type": "credential_theft",
+                "description": "Kerberos attack tool",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "sharphound.exe",
+                "type": "process",
+                "threat_type": "reconnaissance",
+                "description": "BloodHound data collector",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "lazagne.exe",
+                "type": "process",
+                "threat_type": "credential_theft",
+                "description": "Password recovery tool",
+                "confidence": "high",
+                "source": "mitre_attack"
+            }
+        ],
+        "usernames": [
+            {
+                "value": "admin",
+                "type": "username",
+                "threat_type": "privileged_account",
+                "description": "Common target for brute force",
+                "confidence": "low",
+                "source": "best_practice"
+            },
+            {
+                "value": "administrator",
+                "type": "username",
+                "threat_type": "privileged_account",
+                "description": "Default Windows admin account",
+                "confidence": "medium",
+                "source": "best_practice"
+            },
+            {
+                "value": "root",
+                "type": "username",
+                "threat_type": "privileged_account",
+                "description": "Linux superuser account",
+                "confidence": "medium",
+                "source": "best_practice"
+            },
+            {
+                "value": "backdoor_user",
+                "type": "username",
+                "threat_type": "backdoor",
+                "description": "Known backdoor account name",
+                "confidence": "high",
+                "source": "internal_investigation"
+            },
+            {
+                "value": "svc_backup",
+                "type": "username",
+                "threat_type": "service_account",
+                "description": "High-privilege service account often targeted",
+                "confidence": "medium",
+                "source": "best_practice"
+            }
+        ],
+        "command_patterns": [
+            {
+                "value": "curl.*\\|.*bash",
+                "type": "regex",
+                "threat_type": "malware_download",
+                "description": "Remote script execution pattern",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "wget.*\\|.*sh",
+                "type": "regex",
+                "threat_type": "malware_download",
+                "description": "Remote script execution pattern",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "powershell.*-enc",
+                "type": "regex",
+                "threat_type": "obfuscation",
+                "description": "Encoded PowerShell execution",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "certutil.*-urlcache",
+                "type": "regex",
+                "threat_type": "malware_download",
+                "description": "File download via certutil",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "bitsadmin.*\\/transfer",
+                "type": "regex",
+                "threat_type": "malware_download",
+                "description": "File download via BITS",
+                "confidence": "medium",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "nc.*-e.*\\/bin\\/(ba)?sh",
+                "type": "regex",
+                "threat_type": "reverse_shell",
+                "description": "Netcat reverse shell",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "python.*-c.*socket",
+                "type": "regex",
+                "threat_type": "reverse_shell",
+                "description": "Python reverse shell",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "reg.*add.*\\\\CurrentVersion\\\\Run",
+                "type": "regex",
+                "threat_type": "persistence",
+                "description": "Registry persistence",
+                "confidence": "high",
+                "source": "mitre_attack"
+            },
+            {
+                "value": "schtasks.*\\/create",
+                "type": "regex",
+                "threat_type": "persistence",
+                "description": "Scheduled task persistence",
+                "confidence": "medium",
+                "source": "mitre_attack"
+            }
+        ],
+        "urls": [
+            {
+                "value": "http://malware-c2.evil/payload.exe",
+                "type": "url",
+                "threat_type": "malware_distribution",
+                "description": "Malware download URL",
+                "confidence": "high",
+                "source": "urlhaus"
+            },
+            {
+                "value": "https://pastebin.com/raw/",
+                "type": "url_prefix",
+                "threat_type": "payload_hosting",
+                "description": "Common payload hosting service",
+                "confidence": "low",
+                "source": "best_practice"
+            }
+        ],
+        "email_addresses": [
+            {
+                "value": "attacker@malware-c2.evil",
+                "type": "email",
+                "threat_type": "phishing",
+                "description": "Known phishing sender",
+                "confidence": "high",
+                "source": "internal_threat_intel"
+            }
+        ],
+        "registry_keys": [
+            {
+                "value": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run\\malware",
+                "type": "registry",
+                "threat_type": "persistence",
+                "description": "Malware persistence key",
+                "confidence": "high",
+                "source": "internal_investigation"
+            }
+        ]
+    },
+    "threat_categories": {
+        "c2": {
+            "description": "Command and Control infrastructure",
+            "severity": "critical",
+            "mitre_tactic": "TA0011"
+        },
+        "malware": {
+            "description": "Malware indicators",
+            "severity": "critical",
+            "mitre_tactic": "TA0002"
+        },
+        "ransomware": {
+            "description": "Ransomware indicators",
+            "severity": "critical",
+            "mitre_tactic": "TA0040"
+        },
+        "credential_theft": {
+            "description": "Credential theft tools and techniques",
+            "severity": "high",
+            "mitre_tactic": "TA0006"
+        },
+        "lateral_movement": {
+            "description": "Lateral movement techniques",
+            "severity": "high",
+            "mitre_tactic": "TA0008"
+        },
+        "reconnaissance": {
+            "description": "Reconnaissance and discovery",
+            "severity": "medium",
+            "mitre_tactic": "TA0007"
+        },
+        "phishing": {
+            "description": "Phishing infrastructure",
+            "severity": "high",
+            "mitre_tactic": "TA0001"
+        },
+        "persistence": {
+            "description": "Persistence mechanisms",
+            "severity": "high",
+            "mitre_tactic": "TA0003"
+        },
+        "backdoor": {
+            "description": "Backdoor access",
+            "severity": "critical",
+            "mitre_tactic": "TA0003"
+        },
+        "brute_force": {
+            "description": "Brute force attacks",
+            "severity": "medium",
+            "mitre_tactic": "TA0006"
+        },
+        "scanner": {
+            "description": "Network scanning activity",
+            "severity": "low",
+            "mitre_tactic": "TA0043"
+        }
+    }
+}
