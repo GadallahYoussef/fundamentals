@@ -1,0 +1,13 @@
+Dec 31 10:15:23 server sshd[12345]: Failed password for root from 192.168.1.100 port 22 ssh2
+Dec 31 10:15:25 server sshd[12346]: Failed password for root from 192.168.1.100 port 22 ssh2
+Dec 31 10:15:27 server sshd[12347]: Failed password for admin from 192.168.1.100 port 22 ssh2
+Dec 31 10:15:29 server sshd[12348]: Failed password for user from 192.168.1.100 port 22 ssh2
+Dec 31 10:15:31 server sshd[12349]: Failed password for guest from 192.168.1.100 port 22 ssh2
+Dec 31 10:15:33 server sshd[12350]: Failed password for root from 192.168.1.100 port 22 ssh2
+Dec 31 02:30:15 server sshd[12351]: Accepted password for jsmith from 10.0.0.50 port 22 ssh2
+Dec 31 14:45:30 server sshd[12352]: Invalid user test123 from 203.0.113.42
+Dec 31 14:45:32 server sshd[12353]: Invalid user admin123 from 203.0.113.42
+Dec 31 14:45:34 server sshd[12354]: Invalid user user123 from 203.0.113.42
+Dec 31 09:30:00 server sshd[12355]: Accepted password for alice from 172.16.0.10 port 22 ssh2
+Dec 31 15:00:00 server sshd[12356]: Failed password for administrator from 198.51.100.23 port 22 ssh2
+Dec 31 15:00:02 server sshd[12357]: Failed password for root from 198.51.100.23 port 22 ssh2
